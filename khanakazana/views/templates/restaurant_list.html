@@ -1,0 +1,18 @@
+{% import 'macros/restaurant.html' as macro %}
+{% extends 'pagelayout.html' %}
+
+
+
+{% block pagecontent %}
+<h2 style='text-align:center;margin:10px;font-family: cursive;'>{{title}}</h2>
+ <h6 style='text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif' class='text text-success'>Restaurant Count:{{restaurants|length}}</h6>
+        <div class="restaurant-container">
+                {% for restaurant in restaurants %}
+                {{ macro.render_restaurant(restaurant) }}
+                {% endfor %}
+        </div>
+        
+
+
+ 
+{% endblock %}

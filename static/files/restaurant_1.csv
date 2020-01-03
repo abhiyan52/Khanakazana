@@ -1,0 +1,9 @@
+id,name,contact_no,type,opening_time,closing_time,minimim_order 
+1,Red Mug Cafe,1,Nepali,10:30:00,21:00:00,100
+2,Dada ki Rasoi,1,Italian,10:30:00,21:00:00,200
+3,New Town Cafe,1,Chinese,08:00:00,21:00:00,799
+4,Kalika Cafe,1,Nepali,07:00:00,21:00:00,300
+5,Sita Bojanalaya,1,Italian,15:00:00,21:00:00,200
+6,Cafe de Eagle,1,Chinese,12:00:00,21:00:00,100
+7,Cube the club,1,Nepali,11:00:00,21:00:00,200
+8,The last resort,1,Italian,09:00:00,21:00:00,444

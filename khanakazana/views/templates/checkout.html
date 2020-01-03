@@ -1,0 +1,46 @@
+{% extends 'pagelayout.html' %}
+
+
+{% block pagecontent %}
+
+<div class="container">
+	<table id="cart" class="table table-hover table-condensed">
+    				<thead>
+						<tr>
+							<th style="width:50%">Food Item</th>
+							<th style="width:10%">Price</th>
+							<th style="width:10%"></th>
+						</tr>
+					</thead>
+					<tbody>
+                        {% for item in items %}
+                        <tr>
+							<td data-th="Product">
+								<div class="row">
+									<div class="col-sm-2 hidden-xs"><img style="width:80px; height:90px" src="{{url_for('static', filename='images/item.jpeg')}}" alt="..." class="img-responsive"/></div>
+									<div class="col-sm-10">
+										<h4 class="nomargin">{{item.name|capitalize}}</h4>
+										<p>{{item.description}}</p>
+									</div>
+								</div>
+							</td>
+							<td data-th="Price">${{item.price}}</td>
+							<td class="actions" data-th="">
+								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+							</td>
+                        </tr>
+                        {% endfor %}
+					</tbody>
+					<tfoot>
+						<tr>
+							<td><a href="/restaurants" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td colspan="2" class="hidden-xs"></td>
+							<td class="hidden-xs text-center"><strong>Total ${{total}}</strong></td>
+							<td><a href="{{url_for('view.index')}}" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+						</tr>
+					</tfoot>
+				</table>
+</div>
+
+{% endblock %}

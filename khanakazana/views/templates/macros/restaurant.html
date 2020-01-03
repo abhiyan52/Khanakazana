@@ -1,0 +1,35 @@
+{% macro render_restaurant(restaurant) %}
+  <div class="restaurant-item">
+            <div class='restaurant-card'>
+                    <div class="restaurant-header">
+                        <div class='restaurant-image'>
+                            <img src="{{url_for('static', filename='images/restaurant.jpeg')}}" class="restaurant-image" alt="">
+                        </div>
+                        
+                    </div>
+                      <div class='restaurant-body'>
+                            <div class="restaurant-name">{{restaurant.name}}</div>
+                        <div class="restaurant-description">
+                           <p>A casual place for hanging with friends.</p> 
+                            <p>Call us @ {{restaurant.contact}}</p>
+                            <p>Type of Restaurant: {{restaurant.res_type}}</p>
+                            <p>Minimim Order: {{restaurant.minimum_order}}</p>
+                            <p>Come between : {{restaurant.opening_time}} to {{restaurant.closing_time}}</p>
+                        </div>
+                        <div class="button">
+                        <a  class='' href="{{url_for('view.book_restaurant',rest_id=restaurant.id)}}">
+                            <button class='btn btn-primary'>
+                                Book a Visit
+                            </button>
+                        </a>
+                        <a class='' href="{{url_for('view.restaurant_detail',rest_id=restaurant.id)}}">
+                            <button class='btn btn-warning'>
+                                            View Restaurant
+                            </button>
+                            </a>
+                        </div>       
+                      </div>
+            </div>
+      </div>  
+{% endmacro %} 
+            

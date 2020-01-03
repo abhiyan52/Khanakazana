@@ -1,0 +1,27 @@
+{% extends 'pagelayout.html' %}
+{% block pagecontent %}
+
+{% if result.status %}
+ <h3 class="alert alert-success">Sucessfully Fetched</h3>
+<p class='text text-muted alert alert-warning'><small>{{result.total_found}} items found in {{result.time_taken}}ms</small></p> 
+<div class="row">
+
+
+{% for restaurant in result.restaurants %}
+
+<div class="card col-xs-3 col-md-3">
+    <h4>{{restaurant.name}}</h4>
+    <img class='img img-responsive img-thumbnail' src="{{url_for('static', filename='images/restaurant.jpeg')}}" alt="">    
+    <a href="{{url_for('view.restaurant_detail', rest_id=restaurant.id|int)}}">
+        <button class='btn btn-primary'>View Restaurant</button>
+    </a>
+</div>
+
+{% endfor%}
+</div>
+{% else %}
+<h2 class="alert alert-warning">Sucessfully Fetches</h2>
+
+{%  endif %}
+
+{% endblock %}

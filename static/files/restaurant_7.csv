@@ -1,0 +1,9 @@
+id,name,contact_no,type,opening_time,closing_time,minimim_order 
+1,Kathmandu Fried Chicken,1,Nepali,10:30:00,21:00:00,100
+2,KFC,1,Italian,10:30:00,21:00:00,200
+3,Pizza Hut,1,Vietnamese,08:00:00,21:00:00,799
+4,Palpasa Cafe,1,Japnese,07:00:00,21:00:00,300
+5,Cafe du Pashupati,1,Arabian,15:00:00,21:00:00,200
+6,Cafe Club,1,American,12:00:00,21:00:00,100
+7,G cafe,1,Korean,11:00:00,21:00:00,200
+8,Tongba Garden,1,Chinese,09:00:00,21:00:00,444

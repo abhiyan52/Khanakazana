@@ -1,0 +1,26 @@
+{% extends 'pagelayout.html' %}
+
+{% block pagecontent%}
+
+<div class="container forms">
+    <form action="{{action}}" method = 'POST'>
+        <p id='form-title'>{{title}}</p>
+   {% for element in form %}
+        {% if element.label != 'CSRF Token'%}
+        <div class="row form-row">
+            <div class="col-25">
+              <label for="fname">{{element.label}}</label>
+            </div>
+            <div class="col-75">
+              {{element()}}
+            </div>
+          </div>
+        {% endif %}
+   {% endfor %}
+      </form>
+</div>
+
+
+{% endblock %}
+
+  

@@ -1,0 +1,15 @@
+{% extends 'pagelayout.html'%}
+
+
+{% block pagecontent %}
+<h5 class='text text-alert'>
+    {% if g.user_type == 1 %}
+    This is the upload section for the for your restaurant.The filename should have items_ prefix   Please give a valid spredsheet file
+    like <a href="" class='text text-success'>items.csv</a>.The order or rows matters  
+    {% endif %}
+</h5>
+<form class='form form-control' method=POST enctype=multipart/form-data  action="{{action}}">
+<input class='form-control' type="file" name="file" >
+<input type="submit" class='btn btn-primary' name="" id="">
+</form>
+{% endblock %}

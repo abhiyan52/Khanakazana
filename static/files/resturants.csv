@@ -1,0 +1,11 @@
+id,name,contact_no,type,opening_time,closing_time,minimim_order 
+1,Lhasso,9841234976,Bar and Resturant,10:30:00,21:00:00,100
+2,Sewaro,9841234976,Bar and Resturant,10:30:00,21:00:00,200
+3,Little Kathmandu Stick Food,9841234976,Bar and Resturant,08:00:00,21:00:00,799
+4,Bento Cafe,9841234976,Dining,07:00:00,21:00:00,300
+5,Khaja Time,9841234976,Bar and Resturant,15:00:00,21:00:00,200
+6,Shrestha Tandoori ,9841234976,Causal,12:00:00,21:00:00,100
+7,Narayan Dai ko Chatamari,9841234976,Bar and Resturant,11:00:00,21:00:00,200
+8,Crust Pizza,9841234976,Casual,09:00:00,21:00:00,444
+9,Jessy Penny,9841234976,Bar and Resturant,10:00:00,21:00:00,444
+10,Bota Momos,9841234976,Dining,05:00:00,21:00:00,0

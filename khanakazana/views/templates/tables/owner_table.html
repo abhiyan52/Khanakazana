@@ -1,0 +1,70 @@
+{% extends 'pagelayout.html' %}
+
+{% block pagecontent %}
+
+<div class="container">
+        {% for key,value in restaurants.items() %}
+
+        <div class="row">
+                <div class="col-xs-4 col-md-4 owner-table">
+                    <h2 style='font-family: Permanent Marker,cursive;text-align: center'>{{key}}</h2>
+                    <hr>
+                    <div class="" style='margin-bottom: 20px;'>
+                            <a href="{{url_for('view.upload_items', rest_id=value.rest_info.id)}}"><button class='btn btn-default' data-rest-id="{{value.rest_info.id}}">Load From File</button> </a>
+                            <a  target="_blank" href="{{url_for('static', filename='user_files/'+value.rest_info.id|string+'_'+value.rest_info.name|string+'.pdf')}}"><button class='btn btn-warning' data-rest-id="">Download Menu</button> </a>
+                            <a href="{{url_for('view.export_menu', rest_id = value.rest_info.id)}}"><button class='btn btn-success' data-rest-id="{{value.rest_info.id}}">Generate New Menu</button></a> 
+                            <a href="{{url_for('view.add_item',owner_username=g.user,rest_id = value.rest_info.id)}}">  <button class='btn btn-info' data-rest-id="{{value.rest_info.id}}">+ Add Item </button></a> 
+                            
+                              </div>
+                    
+                    <div id="restaurant{{value.rest_info.id}}" class='rest-details'>
+                     <p> Name: {{value.rest_info.name|capitalize}}</p>
+                     <p>Items Available:{{value.menu|length}}</p> 
+                     <p>Contact No: {{value.rest_info.contact}}</p>
+                     <p>Opening Time:{{value.rest_info.opening_time}}</p>
+                     <p>Closing Time:{{value.rest_info.closing_time}}</p>
+                     <p>Minimum Order:{{value.rest_info.minimum_order}}</p>
+                     <hr>
+                     <hr>
+                     <p>Owner:{{g.username|capitalize}}</p>
+                     
+                    </div>    
+                </div>
+                <div class="col-xs-8 col-md-8">
+                        <table class='table table-hover table-striped items-table'>
+                                {% for item in value.menu %}
+                                   {% if loop.index == 1 %}
+                                        <tr class='info' data-item-id="{{item.id}}">
+                                                {% for key,value in item.items()%}
+                                                    {% if loop.index!=1 and key!='rest_id' and key!='id' %}
+                                                    <th class=''>{{key|capitalize}}</th>
+                                                    {% endif %}
+                                                   {% endfor %}
+                                                   <th>Operations</th>
+                                        </tr>
+                                    {% endif %}     
+                                    <tr class='info' id="item{{item.id}}" >
+                                        
+                                            {% for key,value in item.items() %}
+                                                {% if loop.index != 1 and key!='rest_id' and key!='id'%}
+                                                <td class=''>{{value}}</th>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <td id='{{item.id}}'>
+                                                <a href="{{url_for('view.edit_items',item_id=item.id)}}"><button data-item-id='{{item.id}}' class='btn btn-primary'>Update</button></a>    
+                                                <a href = "{{url_for('view.delete_items',item_id=item.id)}}" >
+                                                <button data-item-id='{{item.id}}'  class='btn btn-danger delete-button'>Delete</button>      
+                                                </a>    
+                                              
+                                                
+                                            </td>
+                                    </tr>
+                                {% endfor %}
+                            </table>             
+                </div>
+        
+        </div>
+        {% endfor %}
+</div>
+<script src="{{url_for('static', filename='js/owner_view.js' )}}"></script>
+{% endblock %}

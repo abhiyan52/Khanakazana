@@ -1,0 +1,156 @@
+-----ENGINE INITIALZED-----
+-----ENGINE INITIALZED-----
+-----ENGINE INITIALZED-----
+-----ENGINE INITIALZED-----
+ * Serving Flask app "khanakazana" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+-----ENGINE INITIALZED-----
+-----ENGINE INITIALZED-----
+-----ENGINE INITIALZED-----
+-----ENGINE INITIALZED-----
+2019-01-20 17:44:42,351 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'sql_mode'
+2019-01-20 17:44:42,351 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,353 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-01-20 17:44:42,353 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,355 INFO sqlalchemy.engine.base.Engine SELECT DATABASE()
+2019-01-20 17:44:42,355 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,355 INFO sqlalchemy.engine.base.Engine show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-01-20 17:44:42,355 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,357 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:42,357 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,358 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:42,358 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,359 INFO sqlalchemy.engine.base.Engine SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-01-20 17:44:42,359 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:42,361 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+2019-01-20 17:44:42,362 INFO sqlalchemy.engine.base.Engine SELECT restaurants.id AS restaurants_id, restaurants.name AS restaurants_name, restaurants.contact AS restaurants_contact, restaurants.res_type AS restaurants_res_type, restaurants.minimum_order AS restaurants_minimum_order, restaurants.opening_time AS restaurants_opening_time, restaurants.closing_time AS restaurants_closing_time 
+FROM restaurants 
+WHERE restaurants.id = %(param_1)s
+2019-01-20 17:44:42,362 INFO sqlalchemy.engine.base.Engine {'param_1': 4}
+2019-01-20 17:44:42,365 INFO sqlalchemy.engine.base.Engine SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.price AS items_price, items.category AS items_category, items.`photoURL` AS `items_photoURL`, items.rest_id AS items_rest_id 
+FROM items 
+WHERE items.rest_id = %(rest_id_1)s
+2019-01-20 17:44:42,365 INFO sqlalchemy.engine.base.Engine {'rest_id_1': 4}
+2019-01-20 17:44:44,265 INFO sqlalchemy.engine.base.Engine SELECT restaurants.id AS restaurants_id, restaurants.name AS restaurants_name, restaurants.contact AS restaurants_contact, restaurants.res_type AS restaurants_res_type, restaurants.minimum_order AS restaurants_minimum_order, restaurants.opening_time AS restaurants_opening_time, restaurants.closing_time AS restaurants_closing_time 
+FROM restaurants
+2019-01-20 17:44:44,271 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,482 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'sql_mode'
+2019-01-20 17:44:44,485 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,487 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-01-20 17:44:44,488 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,491 INFO sqlalchemy.engine.base.Engine SELECT DATABASE()
+2019-01-20 17:44:44,491 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,493 INFO sqlalchemy.engine.base.Engine show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-01-20 17:44:44,494 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,496 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:44,496 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,497 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:44,497 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,499 INFO sqlalchemy.engine.base.Engine SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-01-20 17:44:44,499 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:44,500 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+2019-01-20 17:44:44,500 INFO sqlalchemy.engine.base.Engine SELECT DISTINCT items.category AS items_category 
+FROM items
+2019-01-20 17:44:44,501 INFO sqlalchemy.engine.base.Engine {}
+-----ENGINE INITIALZED-----
+2019-01-20 17:44:48,286 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'sql_mode'
+2019-01-20 17:44:48,286 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,288 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-01-20 17:44:48,288 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,290 INFO sqlalchemy.engine.base.Engine SELECT DATABASE()
+2019-01-20 17:44:48,290 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,291 INFO sqlalchemy.engine.base.Engine show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-01-20 17:44:48,291 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,292 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:48,293 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,293 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:48,293 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,294 INFO sqlalchemy.engine.base.Engine SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-01-20 17:44:48,294 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,295 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+2019-01-20 17:44:48,296 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.username = %(username_1)s 
+ LIMIT %(param_1)s
+2019-01-20 17:44:48,296 INFO sqlalchemy.engine.base.Engine {'username_1': 'kunal', 'param_1': 1}
+2019-01-20 17:44:48,427 INFO sqlalchemy.engine.base.Engine SELECT restaurants.id AS restaurants_id, restaurants.name AS restaurants_name, restaurants.contact AS restaurants_contact, restaurants.res_type AS restaurants_res_type, restaurants.minimum_order AS restaurants_minimum_order, restaurants.opening_time AS restaurants_opening_time, restaurants.closing_time AS restaurants_closing_time 
+FROM restaurants
+2019-01-20 17:44:48,427 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,433 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'sql_mode'
+2019-01-20 17:44:48,433 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,436 INFO sqlalchemy.engine.base.Engine SHOW VARIABLES LIKE 'lower_case_table_names'
+2019-01-20 17:44:48,436 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,438 INFO sqlalchemy.engine.base.Engine SELECT DATABASE()
+2019-01-20 17:44:48,438 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,438 INFO sqlalchemy.engine.base.Engine show collation where `Charset` = 'utf8mb4' and `Collation` = 'utf8mb4_bin'
+2019-01-20 17:44:48,438 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,440 INFO sqlalchemy.engine.base.Engine SELECT CAST('test plain returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:48,440 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,440 INFO sqlalchemy.engine.base.Engine SELECT CAST('test unicode returns' AS CHAR(60)) AS anon_1
+2019-01-20 17:44:48,440 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,440 INFO sqlalchemy.engine.base.Engine SELECT CAST('test collated returns' AS CHAR CHARACTER SET utf8mb4) COLLATE utf8mb4_bin AS anon_1
+2019-01-20 17:44:48,441 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:48,441 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+2019-01-20 17:44:48,441 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:44:48,441 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:44:48,650 INFO sqlalchemy.engine.base.Engine SELECT DISTINCT items.category AS items_category 
+FROM items
+2019-01-20 17:44:48,650 INFO sqlalchemy.engine.base.Engine {}
+2019-01-20 17:44:50,075 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:44:50,081 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:44:50,083 INFO sqlalchemy.engine.base.Engine SELECT restaurants.id AS restaurants_id, restaurants.name AS restaurants_name, restaurants.contact AS restaurants_contact, restaurants.res_type AS restaurants_res_type, restaurants.minimum_order AS restaurants_minimum_order, restaurants.opening_time AS restaurants_opening_time, restaurants.closing_time AS restaurants_closing_time, items.id AS items_id, items.name AS items_name, items.description AS items_description, items.price AS items_price, items.category AS items_category, items.`photoURL` AS `items_photoURL`, items.rest_id AS items_rest_id 
+FROM restaurants, items, owners, users 
+WHERE owners.user_id = users.id AND users.username = %(username_1)s AND restaurants.id = owners.rest_id AND items.rest_id = restaurants.id
+2019-01-20 17:44:50,084 INFO sqlalchemy.engine.base.Engine {'username_1': 'kunal'}
+2019-01-20 17:44:50,243 INFO sqlalchemy.engine.base.Engine SELECT restaurants.id AS restaurants_id, restaurants.name AS restaurants_name, restaurants.contact AS restaurants_contact, restaurants.res_type AS restaurants_res_type, restaurants.minimum_order AS restaurants_minimum_order, restaurants.opening_time AS restaurants_opening_time, restaurants.closing_time AS restaurants_closing_time 
+FROM restaurants, owners, users 
+WHERE owners.user_id = users.id AND users.username = %(username_1)s AND restaurants.id = owners.rest_id
+2019-01-20 17:44:50,243 INFO sqlalchemy.engine.base.Engine {'username_1': 'kunal'}
+{'Bento Cafe': {'menu': [], 'rest_info': Bento Cafe}}
+2019-01-20 17:44:53,520 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:44:53,521 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:45:01,471 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:45:01,471 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:45:10,311 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:45:10,311 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:45:10,313 INFO sqlalchemy.engine.base.Engine INSERT INTO items (name, description, price, category, `photoURL`, rest_id) VALUES (%(name)s, %(description)s, %(price)s, %(category)s, %(photoURL)s, %(rest_id)s)
+2019-01-20 17:45:10,313 INFO sqlalchemy.engine.base.Engine {'name': 'ddd', 'description': 'ddd', 'price': '100', 'category': 'ddd', 'photoURL': '', 'rest_id': 4}
+2019-01-20 17:45:10,338 INFO sqlalchemy.engine.base.Engine COMMIT
+<input id="name" name="name" required type="text" value="ddd">
+<textarea id="description" name="description" required>ddd</textarea>
+<input id="price" name="price" required type="text" value="100">
+<input id="category" name="category" required type="text" value="ddd">
+<input id="submit" name="submit" type="submit" value="Add Items">
+<input id="csrf_token" name="csrf_token" type="hidden" value="IjAyMzExZWNkY2QxZjg0NmUzMmQ4NDczN2I0MTM5YzIwYWY0MmE5NDgi.XERmTg.PWEhMx1w08xoDybYtdKDcZSalh4">
+2019-01-20 17:45:10,504 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:45:10,505 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:45:10,506 INFO sqlalchemy.engine.base.Engine BEGIN (implicit)
+2019-01-20 17:45:10,506 INFO sqlalchemy.engine.base.Engine SELECT restaurants.id AS restaurants_id, restaurants.name AS restaurants_name, restaurants.contact AS restaurants_contact, restaurants.res_type AS restaurants_res_type, restaurants.minimum_order AS restaurants_minimum_order, restaurants.opening_time AS restaurants_opening_time, restaurants.closing_time AS restaurants_closing_time, items.id AS items_id, items.name AS items_name, items.description AS items_description, items.price AS items_price, items.category AS items_category, items.`photoURL` AS `items_photoURL`, items.rest_id AS items_rest_id 
+FROM restaurants, items, owners, users 
+WHERE owners.user_id = users.id AND users.username = %(username_1)s AND restaurants.id = owners.rest_id AND items.rest_id = restaurants.id
+2019-01-20 17:45:10,506 INFO sqlalchemy.engine.base.Engine {'username_1': 'kunal'}
+{'Bento Cafe': {'menu': [{'_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x7f52e140dbe0>, 'photoURL': '', 'category': 'ddd', 'description': 'ddd', 'id': 1, 'rest_id': 4, 'price': 100, 'name': 'ddd'}], 'rest_info': Bento Cafe}}
+2019-01-20 17:45:12,995 INFO sqlalchemy.engine.base.Engine SELECT users.id AS users_id, users.username AS users_username, users.password AS users_password, users.name AS users_name, users.email AS users_email, users.user_type AS users_user_type, users.address AS users_address, users.contact AS users_contact 
+FROM users 
+WHERE users.id = %(param_1)s
+2019-01-20 17:45:12,995 INFO sqlalchemy.engine.base.Engine {'param_1': '6'}
+2019-01-20 17:45:12,997 INFO sqlalchemy.engine.base.Engine SELECT items.id AS items_id, items.name AS items_name, items.description AS items_description, items.price AS items_price, items.category AS items_category, items.`photoURL` AS `items_photoURL`, items.rest_id AS items_rest_id 
+FROM items 
+WHERE items.id = %(id_1)s 
+ LIMIT %(param_1)s
+2019-01-20 17:45:12,997 INFO sqlalchemy.engine.base.Engine {'id_1': '1', 'param_1': 1}

@@ -1,0 +1,10 @@
+{% import 'macros/item.html' as macro %}
+
+{% macro render_items(items) %}
+   <img src="{{url_for('static', filename='images/menu.png')}}"  id= 'our_menu' alt="">
+<div class="item-container">
+ {% for item in items %}
+    {{ macro.render_item(item) }}
+ {% endfor %}  
+</div>
+{% endmacro %}

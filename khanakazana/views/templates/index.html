@@ -1,0 +1,60 @@
+{% extends 'pagelayout.html' %}
+
+{% set user = user %}
+{% set user_type = user_type %}
+{% block pagecontent %}
+    <section class='categories'>
+           <h3 class="section-title">Categories</h3>
+            <div class='container categories-container' id='categories-content'>
+                    <div class="row" id="">
+                      </div>
+                    <div class="row restaurants">
+                        
+                    </div>
+                </div>
+            
+    </section>
+
+    <section>
+        <h3 class="section-title">Trending Restaurants</h3>
+        <div class='container restaurant-container' id='restaurant-content'>
+                <div class="row" id="">
+                  </div>
+                <div class="row restaurants">
+                    
+                </div>
+            </div>
+    
+    </section>
+    
+    {% raw %}
+
+    <script id="categories-template" type="text/x-handlebars-template">
+        {{#each data}}
+                <a href="/category/{{this}}">
+                        <div class='category-item'>
+                                <img src="/static/images/image_chinese.jpg" class='category-image' alt="">
+                                <div class="centered">{{this}}</div>
+                        </div>
+                  
+                </a>
+        {{/each}}
+    </script>
+    
+    <script id="restaurant-template" type="text/x-handlebars-template">
+        {{#each data}}
+                <a href="/restaurant/{{id}}">
+                        <div class='restaurant-item'>
+                                <img src="/static/images/bento.jpg" class='restaurant-image img img-circle' alt="">
+                                <div class="centered">{{name}}</div>
+                        </div>
+                  
+                </a>
+               
+               
+        {{/each}}
+    </script>
+    {% endraw %}
+    {% endblock %}
+
+

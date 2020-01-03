@@ -1,0 +1,32 @@
+{% extends 'pagelayout.html' %}
+{% import 'item_list.html' as macro %}
+
+
+{% block pagecontent %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-md-4 restaurant-description">
+            <img class="img img-responsive img-rounded restaurant-detail-image" src="{{url_for('static', filename='images/bento.jpg')}}"  alt=""> 
+            <hr>
+            
+            <div class="restaurant-information">
+                <p><span><i class="fa fa-home" style="color:black"></i> {{restaurant.name}} </span></p>
+                <p><span><i class="fa fa-money" style="color:greenyellow"></i> $ {{restaurant.minimum_order}} </span></p>
+                <p><span><i class="fa fa-clock-o" style="color:blue"></i> {{restaurant.opening_time}} </span></p>
+                <p><span><i class="fa fa-clock-o" style="color:red;"></i> {{restaurant.opening_time}} </span></p>
+                <p><span><i class="fa fa-shopping-cart" style="color:brown;"></i> Online order </span></p>
+                <p><span><i class="fa fa-phone" style="color:red;"></i> {{restaurant.contact}} </span></p>   
+                <hr>
+                <a target="_blank" href="{{url_for('static', filename='user_files/'+restaurant.id|string+'_'+restaurant.name|string+'.pdf')}}"> 
+                    <button style='margin-bottom: 10px' class="btn btn-primary">Download Menu</button>
+                </a>
+            </div>  
+        </div>
+        <div class="col-xs-8 col-md-8 restaurant-items">
+                {{ macro.render_items(items) }}
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

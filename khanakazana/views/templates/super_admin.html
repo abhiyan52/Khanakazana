@@ -1,0 +1,46 @@
+{% extends 'pagelayout.html' %}
+{% import 'tables/super_table.html' as macro %}
+{% block pagecontent %}
+    <h2 class='text-primary' style="text-align:center"> Super Admin Panel</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-md-4">
+                {% if restaurants|length == 0%}
+                <p class='alert alert-danger'>Data is not loaded</p>
+                <a href="{{url_for('view.super_admin_load')}}"><button class='btn btn-warning'>LOAD DATA</button></a>
+                {% endif %}
+                <h3>Site Statistics:</h3>
+                <hr>
+                <p class='text-success'>Number of Users: {{users|length}} </p>
+                <p class='text-success'>Number of Restaurants: {{restaurants|length}} </p>
+                <p class='text-success'><a href="{{url_for('view.add_restaurant')}}"><button class='btn btn-primary'>+Add a New Restaurant</button></a></p>
+                <p class='text-success'><a href="{{url_for('view.add_restaurant')}}"><button disabled class='btn btn-default'>LOAD FROM CSV</button></a></p>
+                <p class='text-success'></p>
+            </div>
+            <div class="col-xs-8 col-md-8">
+                <table class='table table-striped'>
+                    <tr>
+                        <th><span class='text text-success'>Name</span></th>
+                        <th><span class='text text-success'>Owner ID</span></th>
+                        <th><span class='text text-success'>Add Owner</span></th>
+                    </tr>
+                    {% for restaurant_info in restaurants %}
+                    <tr>
+                        <th>{{restaurant_info[0].name}}</th>
+                        <th>{{restaurant_info[1]}}</th>
+                        <th>
+                        {% if not restaurant_info[1] %}
+                        <a href="{{url_for('view.add_owner',rest_id=restaurant_info[0].id)}}"><button class="btn btn-warning" >Add Owner</button></a>
+                        {% else %}
+                        ----
+                        {% endif %}
+                    </th>
+                    </tr>
+                    {% endfor %}
+                </table>                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

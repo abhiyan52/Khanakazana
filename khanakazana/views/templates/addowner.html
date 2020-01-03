@@ -1,0 +1,16 @@
+{% extends 'pagelayout.html' %}
+
+{% block pagecontent %}
+    <h3 class='text text-primary'>Please Add the Owner for {{restaurant.name}}</h3>
+
+    <form class='form form-control' action="{{request.url}}" method="post">
+        <select class='form-control' name="owner_id" id="">
+            {% for user in users %}
+            <option value="{{user.id}}">{{user.username}}</option>
+            {% endfor %}
+            
+        </select>
+        <input type="submit" name="submit" id="" class='btn btn-primary'>
+    </form>
+
+{% endblock %}

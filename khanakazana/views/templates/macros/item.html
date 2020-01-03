@@ -1,0 +1,16 @@
+
+{% macro render_item(item) %}
+<div class="item">
+    <img src="{{url_for('static', filename='images/item.jpeg')}}" class='item-image' alt="">
+    <img src="{{url_for('static', filename='images/nonveg.png')}}" class='item-type-image' alt="">
+    <span class='item-name'>{{item.name}}</span>
+    <span class="category">{{item.category}}</span>
+    <span class="price">{{item.price}}$</span>
+    <button class='btn btn-primary item-button'>View <i class="fa fa-eye"></i></button>
+    <button class='btn btn-primary item-button cart-add' data-item-id='{{item.id}}'>Add Item+</button>
+</div>
+{% endmacro %}
+
+
+       
+  
